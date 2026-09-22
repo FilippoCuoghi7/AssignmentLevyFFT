@@ -1,4 +1,4 @@
-% runAssignment04_Group01
+% runAssignment04
 % AY2025-2026
 
 clc; clear; close all
