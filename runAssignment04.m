@@ -4,7 +4,7 @@
 clc; clear; close all
 format long
 
-projectRoot = fileparts(which('runAssignment04_Group01.m'));
+projectRoot = fileparts(which('runAssignment04.m'));
 addpath(genpath(projectRoot));
 
 %% Bootstrap 

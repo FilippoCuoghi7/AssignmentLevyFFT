@@ -1,4 +1,5 @@
-function printExercise2Report(Notional, payoff_DO, ref_date, mat_date, df_mat, DO_Black, Correction, Corrected_Price, details_BP, details_Corr)
+function printExercise2Report(Notional, payoff_DO, ref_date, mat_date, df_mat, ...
+    DO_Black, Correction, Corrected_Price, details_BP, details_Corr)
 % PRINTEXERCISE2REPORT Prints a formatted valuation and risk report for Exercise 2.
 %
 % INPUTS:
