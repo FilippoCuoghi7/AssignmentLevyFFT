@@ -4,7 +4,7 @@ function CallPricesMC = computeCallPricesMC(Nsim, sigma, eta, kappa, dt, F0, df_
 %
 % -------------------------------------------------------------------------
 % INPUTS:
-%   Nsim         : Number of Monte Carlo simulation paths (e.g., 1e6).
+%   Nsim         : Number of Monte Carlo simulation paths.
 %   sigma        : Volatility parameter of the model.
 %   eta          : Skewness/Asymmetry parameter of the model.
 %   kappa        : Variance parameter of the market time subordinator.
@@ -12,7 +12,7 @@ function CallPricesMC = computeCallPricesMC(Nsim, sigma, eta, kappa, dt, F0, df_
 %   F0           : Forward price of the underlying asset at maturity.
 %   df_mat       : Discount factor from maturity to today.
 %   x            : (Vector) Log-moneyness values (x = ln(F0/K)).
-%   alpha        : Tail heaviness parameter (e.g., 1/2 for NIG model).
+%   alpha        : Tail heaviness parameter.
 %
 % OUTPUTS:
 %   CallPricesMC : (Vector) Discounted expected Call option prices
@@ -39,7 +39,6 @@ G = random('InverseGaussian', mu_IG, lambda_IG, Nsim, 1);
 G_absolute = G * dt;
 
 % SIMULATE TERMINAL STOCK PRICES (using Anthitetic Variable technique)
-% Draw half the normal variables and mirror them to ensure Mean = 0
 N_half = floor(Nsim / 2);
 g_half = randn(N_half, 1);
 g = [g_half; -g_half];

@@ -1,4 +1,5 @@
-function [MC_Coupon, Call_MC, MC_Error] = computeCouponMC(Nsim, alpha, T, df, weights, strike, d1, d2, rho, sigma1, sigma2, notional)
+function [MC_Coupon, Call_MC, MC_Error] = computeCouponMC(Nsim, alpha, T, df, ...
+    weights, strike, d1, d2, rho, sigma1, sigma2, notional)
 % COMPUTECOUPONMC Prices an Arithmetic Basket Call Option using Monte Carlo
 % Simulations and Cholesky decomposition for the correlation.
 %

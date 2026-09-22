@@ -1,7 +1,29 @@
-function [df, Coupon, details] = computeCouponMomentMatching(alpha, start_date, end_date, dates, discounts, weights, strike, d1, d2, rho, sigma1, sigma2, notional)
+function [df, Coupon, details] = computeCouponMomentMatching(alpha, start_date, ...
+    end_date, dates, discounts, weights, strike, d1, d2, rho, sigma1, sigma2, notional)
 % COMPUTECOUPONMOMENTMATCHING Calculates the final monetary payoff of a
 % European Call on an arithmetic two-asset basket using Moment Matching
 % (The Levy Approximation).
+%
+% Inputs:
+%   alpha    : Participation coefficient
+%   start_date : Start date of the certificate
+%   end_date : Maturity date of the certificate
+%   dates    : Dates of the bootstrapped discount curve
+%   discounts: Discount factors of the bootstrapped curve
+%   weights  : 2-element vector containing the weights of the two assets
+%   strike   : Strike level of the basket option (the protection level)
+%   d1, d2   : Continuous dividend yields of asset 1 and asset 2
+%   rho      : Correlation coefficient between the two assets
+%   sigma1   : Implied volatility of asset 1
+%   sigma2   : Implied volatility of asset 2
+%   notional : The Principal Amount of the contract
+%
+% Outputs:
+%   df       : Interpolated discount factor at the maturity date
+%   Coupon   : Final monetary value of the coupon payment
+%   details  : Struct with the intermediate moment-matching quantities
+%              (basket forward, second moment, synthetic basket vol) used
+%              for the report
 
 % Ensure weights is a column vector
 w = weights(:);

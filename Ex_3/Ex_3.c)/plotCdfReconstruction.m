@@ -16,8 +16,7 @@ function plotCdfReconstruction(f, F0, B, M, x1, z1, dz, Nsim, titleStr, seedVal)
 
 rng(seedVal, 'twister');
 
-% Build the target grid and reconstruct the CDF (same construction used
-% internally by computeCallMCFFTCDF.m)
+% Build the target grid and reconstruct the CDF
 y_grid = linspace(-20, 20, 20000);
 eval_x = -y_grid;
 D_grid = priceDigitalFFT(f, eval_x, B, M, x1, z1, dz);

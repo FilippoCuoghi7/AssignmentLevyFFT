@@ -2,8 +2,6 @@ function [fhat, x, z] = computeIntegralFFT(f, M, x1, z1, dz)
 % computeIntegralFFT Compute discrete Fourier transform via FFT following
 % the convention dx*dz = 2*pi/N.
 %
-%   [fhat, x, z] = computeIntegralFFT(f, M, x1, z1)
-%
 %   Inputs:
 %       f  : function handle
 %            Function f(x) to be sampled on the x-grid.

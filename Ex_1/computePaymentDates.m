@@ -1,4 +1,5 @@
-function [payment_dates, details] = computePaymentDates(start_date, end_date, num_payment_a_year, convention)
+function [payment_dates, details] = computePaymentDates(start_date, end_date, ...
+    num_payment_a_year, convention)
 % COMPUTE_PAYMENT_DATES Computes a vectorized schedule of adjusted payment
 % dates for a financial contract between a start and end date.
 %

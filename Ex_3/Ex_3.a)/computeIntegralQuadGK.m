@@ -4,7 +4,7 @@ function Lewis_integral = computeIntegralQuadGK(fun_char, x)
 %
 % INPUTS:
 %   fun_char : A function handle for the characteristic function @(u).
-%   x        : The log-moneyness (scalar or vector, e.g., [-0.05223, 0, 0.15]).
+%   x        : The log-moneyness (scalar or vector).
 %
 % OUTPUTS:
 %   Lewis_integral : The evaluated integral(s) as an array matching the size of x.

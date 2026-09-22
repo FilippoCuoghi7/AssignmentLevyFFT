@@ -1,4 +1,5 @@
-function printExercise1Report(Principal, ref_date, mat_date, Protection, alpha, spread, rho, df_mat, BPV_f, coupon, X_perc, details_dates, details_coupon, X_percMC, MC_Error)
+function printExercise1Report(Principal, ref_date, mat_date, Protection, alpha, ...
+    spread, rho, df_mat, BPV_f, coupon, X_perc, details_dates, details_coupon, X_percMC, MC_Error)
 % PRINTEXERCISE1REPORT Prints a formatted valuation report for Ex 1.
 %
 % INPUTS:
